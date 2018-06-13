@@ -1,0 +1,53 @@
+drop database if exists yadda;
+create database yadda;
+use yadda;
+
+create table Users(
+    Username varchar(16) not null,
+    Name varchar(16) not null,
+    Password blob not null,
+    Email varchar(32) not null,
+    ProfilImage blob not null,
+    Admin tinyint(1) not null,
+    Activated tinyint(1) not null,
+    primary key(Username),
+    unique(Username)
+);
+
+create table Listener(
+    UsernameListener varchar(16) not null,
+    UsernameListensTo varchar(16) not null,
+    primary key(UsernameListener, UsernameListensTo),
+    foreign key(UsernameListener) references Users(Username) on delete cascade,
+    foreign key(UsernameListensTo) references Users(Username) on delete cascade
+);
+
+
+create table Yadda(
+    YaddaID int auto_increment,
+    Text varchar(160) not null,
+    Username varchar(16) not null,
+    DateAndTime datetime not null,
+    primary key(YaddaID)
+);
+
+create table Tag(
+    YaddaID int(16) not null,
+    Tagname varchar(16) not null,
+    primary key(YaddaID, Tagname),
+    foreign key(YaddaID) references Yadda(YaddaID) on delete cascade
+);
+
+create table Image(
+    YaddaID int(16) not null,
+    Imagedata blob not null,
+    primary key(YaddaID)
+);
+
+create table Reply(
+    YaddaID int(16) not null,
+    YaddaIDReply int(16) not null,
+    primary key(YaddaID, YaddaIDReply),
+    foreign key(YaddaID) references Yadda(YaddaID) on delete cascade,
+    foreign key(YaddaIDReply) references Yadda(YaddaID) on delete cascade
+);

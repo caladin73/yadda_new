@@ -1,0 +1,157 @@
+/* 
+                 css/style.css
+    Project    : YaddaYaddaYadda
+    Author     : Daniel Christensen
+*/
+
+/*          TABLE OF CONTENT        */
+/* 
+            1. Normalize
+            2. Navigation
+            3. Content
+*/
+
+/*          1. Normalize            */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    background-color: grey; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+}
+
+.button:hover {
+    color: lightcoral;
+}
+
+/*          2. Navigation           */
+
+header {
+    background-color: grey;
+}
+
+header h1 {
+    padding: 25px 20px;
+    color: white;
+    position: absolute;
+}
+
+#menu {
+    width:100%;
+    height:95px;
+}
+
+#menu li {
+    width: 12%;
+    float: right;
+    right: 0;
+    margin: 35px 0;
+    list-style-type: none;
+    text-align: center;
+}
+
+#menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+#menu a:hover {
+    color: lightcoral;
+}
+
+/*          3. Content           */
+
+.main {
+    width: 65%;
+    margin: 0 auto;
+}
+
+.main form{
+    width: 300px;
+    margin: 20px auto;
+}
+
+#login,
+#create {
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid grey;
+}
+
+#login caption,
+#create caption{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.main tbody {
+    margin: 10px;
+}
+
+.welcome {
+    width: 400px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.haves {
+    width: 200px;
+    float: left;
+}
+
+#yaddasmain {
+    width: 65%;
+    margin: 0 auto;
+}
+
+#yaddasmain form{
+    width: 300px;
+    margin: 20px auto;
+}
+
+.yaddas {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.yadda {
+    width:500px;
+    border: 2px solid grey;
+    font-size: 1.3em;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#yaddareply{
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    border: 2px solid grey;
+}
