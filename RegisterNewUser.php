@@ -33,7 +33,7 @@
     include './includes/menu.inc.php';
 ?>
         <main id="mydiv">
-          <form id='formalia' action="./registerNewUserDb.php" method="post">
+          <form id='formalia' action="" method="post">
             <table id="register">
                 <caption>New user</caption>
                 <tr>

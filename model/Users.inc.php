@@ -1,10 +1,5 @@
 <?php
 
-//
-// Author : Jesper Uth Krab
-// Made On : Oct 23, 2017 2:25:56 PM  
-//
-
     error_reporting(E_ALL);
 
     require_once 'DbP.inc.php';
